@@ -1,4 +1,4 @@
-import javax.swing.JOptionPane
+import javax.swing.JOptionPane ;
 
 class Grades
 {
@@ -18,6 +18,67 @@ class Grades
     static int Presentation = 0;
     static double FinalNumericGrade = 0;
     static String FinalLetterGrade = ""; 
+
+    public static void main (String args[])
+    {
+        String MoreGradesToCalculate ;
+        String Response ;
+        
+        MoreGradesToCalculate = JOptionPane.showInputDialog("do you want to calcualte Grades");
+        MoreGradesToCalculate = MoreGradesToCalculate.toUpperCase();
+       
+        While (MoreGradesToCalculate.equals("YES"))
+        {
+            Response = WhatKindOfStudent();
+            switch (Integer.parseInt(Response)) {
+                case 1:
+                    CalculateEnglishGrade();
+                    displayGrade (Midterm,FinalExamGrade ,Research , Presentation , FinalNumericGrade ,FinalLetterGrade);
+                    break;
+                case 2:
+                CalcualteMathGrade();
+                displayGrade (Midterm,FinalExamGrade ,FinalNumericGrade ,FinalLetterGrade);
+                    break;
+                case 3:
+                    CalcualteScienceGrade();
+                    displayGrade(Midterm , FinalExamGrade , Research , FinalNumericGrade,FinalLetterGrade);
+                    break;
+            
+            
+                default:
+                    JOptionPane.showMessageDialog(null, Response + " - is not a valid student type");
+                    System.exit(0);
+                    break;
+            }
+        }
+       
+       
+       
+       
+       
+       
+       
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+
+
+       
+       
+       
+       
+       
+       
+       
+    }
+
 
     
 }
