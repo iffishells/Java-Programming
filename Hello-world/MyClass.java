@@ -1,17 +1,26 @@
+import java.util.jar.Attributes.Name;
+
 import javax.swing.text.StyledEditorKit;
+
+import jdk.nashorn.internal.ir.ReturnNode;
 
 public class MyClass{
     public static void main(String[] args){
-        System.out.println("Hellow world");
-        String name = "zain";
-
-        System.out.println("Hello " + name);
+       
         
-        int number = 23;
+        func("john");
+        int age=age(2);
+        System.out.println(age);    
+    }
 
-        float float_Val = 20;
-        System.out.print(float_Val);
-        System.out.println(number);
+    static void func(String Name){
+        System.out.println("Name is  : "+ Name);
+    }
+    
+    static int age(int x){
+        return x +5;
+
+    
     }
 
 }
