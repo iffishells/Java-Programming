@@ -8,19 +8,22 @@ public class MyClass{
     public static void main(String[] args){
        
         
-        func("john");
-        int age=age(2);
-        System.out.println(age);    
+        int num1 =  plusMethod(2, 3);
+        System.out.println( "Num1 : "+ num1);
+        double num2  = plusMethod(3.4, 8.7);
+        System.out.println(num2);
+    
+
     }
 
-    static void func(String Name){
-        System.out.println("Name is  : "+ Name);
-    }
-    
-    static int age(int x){
-        return x +5;
+    static int plusMethod(int x , int y){
 
-    
+        return x+y;
+    }
+    // according to the parameter function is calling
+    static double plusMethod(double x , double y){
+
+        return x +y;
     }
 
 }
