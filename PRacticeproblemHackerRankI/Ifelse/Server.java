@@ -21,21 +21,19 @@ public class Server {
 
     static String conversion(String str){
         String msg = "Please send an Aplhabet";
-        // Pattern p = Pattern.compile("[^A-Za-z0-9]");
-        // Matcher m = p.matcher(str);
-        // boolean b = m.find();
 
         if(isStringOnlyAlphabet(str)){
             char[] finalStr = new char[str.length()];
             for (int i=0 ; i<str.length() ; i++)
             {
                 char element = str.charAt(i);
-    
+                System.out.println("in if condition");
                 if (element >= 'A' && element <='Z'){
+                    
                     finalStr[i] = Character.toLowerCase(element);
                 }
                 else{
-                    finalStr[i] = Character.toLowerCase(element);
+                    finalStr[i] = Character.toUpperCase(element);
     
                 }
             }
