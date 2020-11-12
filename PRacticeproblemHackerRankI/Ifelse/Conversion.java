@@ -1,41 +1,23 @@
+import java.net.Socket;
+import java.nio.MappedByteBuffer;
 
-import java.lang.*;
+// import jdk.internal.org.jline.utils.InputStreamReader;
 
-import org.w3c.dom.ElementTraversal;
+import java.io.*;
+// import java.io.Buffered  Reader;
+import java.io.PrintWriter;
 
-import jdk.nashorn.internal.ir.ReturnNode;
 
-public class Conversion {
+public class Conversion{
 
-    static String conversion(String str){
-
-        char[] finalStr = new char[str.length()];
-        for (int i=0 ; i<str.length() ; i++)
-        {
-            char element = str.charAt(i);
-
-            if (element >= 'A' && element <='Z')
-            {
-                finalStr[i] = Character.toLowerCase(element);
-            }
-            else{
-                finalStr[i] = Character.toLowerCase(element);
-            }
-        }
-        
-        String returnStream = String.valueOf(finalStr); 
-        return returnStream;
-        
-    }
 
     public static void main(String[] args) {
-
-       System.out.println( conversion("WELCOME to The PakistaN"));
-
         
+        BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
 
-
-
+            String str = userInput.readLine();
+            System.out.println("nrngnirngringir : " +str);
 
     }
+        
 }
